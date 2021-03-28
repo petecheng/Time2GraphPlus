@@ -157,8 +157,7 @@ python scripts/run.py --dataset ucr-Earthquakes --K 50 --C 500
 
 ### Data Sets
 
-The three benchmark datasets reported in <sup>[1]</sup> was made public by [UCR](https://www.cs.ucr.edu/%7Eeamonn/time_series_data_2018/), which consists of many time series datasets. we select several *UCR* datasets from many candidates by the following reasons that: 1) to maintain the consistency of evaluation metrics between the real-world and public datasets, we only consider binary-label ones in *UCR*; 2) we have to make sure that there are enough training cases because we need sufficient samples to capture the normal transitions between shapelets (many binary-label datasets in *UCR* only have less than 100 training samples), and 3) we omit all datasets categorized as “image”, because the proposed intuition (timing factor, shapelet evolutions) may not be appropriate for time series transformed from images. After filtering based on the abovementioned criterion, and due to space limitation, we only present those three in <sup>[1]</sup>. We have tested some others such as *Ham* and *Computers*, etc., and also achieved competitive results compared with baseline methods.
-
+The three benchmark datasets reported in <sup>[1]</sup> was made public by [UCR](https://www.cs.ucr.edu/%7Eeamonn/time_series_data_2018/), and detailed descriptions can be referred in [Time2Graph](https://github.com/petecheng/Time2Graph).
 Furthermore, we apply the proposed *Time2Graph* model on three real-world scenarios: Electricity Consumption Records (**ECR**) and Elderly Electricity Records (**EER**) provided by State Grid of China, and Network Traffic Flow (**NTF**) from China Telecom. Detailed dataset descriptions can be found in our paper. The performance increment compared with existing models clearly demonstrate the effectiveness of the framework, and below we list the final results along with several popular baselines.
 
 ### Performance
@@ -195,10 +194,11 @@ Furthermore, we apply the proposed *Time2Graph* model on three real-world scenar
 |      Time2Graph       |  71.52    |   56.25   |   62.97   |
 |      Time2Graph+       | **32.80** | **66.19** | **43.87** |
 
+
 Please refer to our paper <sup>[1]</sup> for detailed information about the experimental settings, the description of unpublished data sets, the full results of our experiments, along with ablation and observational studies.
+Last but not least, we have deployed Time2Graph+ model in a real-world application, elderly recognition, cooperated with State Grid of China, Jinhua Zhejiang. See [Project Homepage](https://petecheng.github.io/Time2GraphPlus/) and our paper for details.
 
 ## Reference
-Shuo Jiang, Wenjie Hu, Zhangchi Ying, Ziwei Chai
 [1] Cheng, Z; Yang, Y; Jiang, S; Hu, W; Ying, Z and Chai, Z, 2021, Time2Graph: Bridging Time Series and Graph Representation Learning via Multiple Attentions, under review.
 
 [2] Cheng, Z; Yang, Y; Wang, W; Hu, W; Zhuang, Y and Song, G, 2020, Time2Graph: Revisiting Time Series Modeling with Dynamic Shapelets, In AAAI, 2020
